@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <style>
+     *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         font-family: 'Poppins',sans-serif;
+     }
+     body{
+         background: #6bb3ca;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         min-height: 100vh;
+     }
+    .container{
+         position: relative;
+         width: 100%;
+         max-width: 1000px;
+         min-height: 1000px;
+         background: #fff;
+         margin: 50px;
+         display: grid;
+         grid-template-columns: 1fr 2fr;
+         box-shadow: 0 35px 35px rgba(0,0,0,0.1);
+
+     }
+     .container .left_side
+     {
+         position: relative;
+         background: #04202c;
+         padding: 40px;
+      }
+     .container .right_side{
+        position: relative;
+        background: #fff;
+        padding: 40px;
+     }
+     .profiletext{
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         padding-bottom: 20px;
+         border-bottom: 1px solid rgba(255,255,255,0.2);
+     }
+     .profiletext .img{
+         position: relative;
+         width: 200px;
+         height: 200px;
+         border-radius: 50%;
+         overflow: hidden;
+     }
+     .profiletext .img img{
+         position: absolute;
+         top: -2px;
+         left: -27px;
+         width: 123%;
+         height: 124%;
+         object-fit: cover;;
+     } 
+     .profiletext h2{
+         color: #fff;
+         font-size: 1.5em;
+         margin-top: 20px;
+         text-transform: uppercase;
+         text-align: center;
+         font-weight: 600;
+         line-height: 1.4em;
+     }
+     .profiletext h2 span{
+         font-size: 0.8em;
+         font-weight: 300;
+     }
+     .contactinfo{
+         padding-top: 40px;
+     }
+     .title{
+         color: #fff;
+         text-transform: uppercase;
+         font-weight: 600;
+         letter-spacing: 1px;
+         margin-bottom: 20px;
+     }
+     .contactinfo ul{
+         position: relative;
+     }
+     .contactinfo ul li{
+         position: relative;
+         list-style: none;
+         margin: 10px 0;
+         cursor: pointer;
+     }
+     .contactinfo ul li .icon{
+         display: inline-block;
+         width: 30px;
+         font-size: 18px;
+         color: #a0a9af;
+     }
+     .contactinfo ul li span{
+         color: #fff;
+         font-weight: 300;
+     }
+     .contactinfoeducation li{
+           margin-bottom: 15px;
+     }
+     .contactinfoeducation h5{
+           color: #a0a9af;
+           font-weight: 500;
+     }
+     .contactinfoeducation h4:nth-child(2)
+     {
+         color: #fff;
+         font-weight: 500;
+     }
+     .contactinfoeducation h4{
+         color: #fff;
+         font-weight: 300;
+     }
+     .about{
+         margin-bottom: 50px;
+     }
+     .about:last-child{
+         margin-bottom: 0;
+     }
+     .title2{
+         color: #003147;
+         text-transform: uppercase;
+         letter-spacing: 1px;
+         margin-bottom: 10px;
+     }
+     p{
+         color: #333;
+     }
+     .about .box{
+         display: flex;
+         flex-direction: row;
+         margin: 20px 0;
+     }
+     .about .box .year_company{
+         min-width: 150px;
+     }
+     .about .box .year_company h5{
+         text-transform: uppercase;
+         color: #4c758b;
+         font-weight: 600;
+     }
+     .about .box .text h4{
+         text-transform: uppercase;
+         color: #003147;
+         font-size: 16px;
+
+     }
+     .skills .box{
+         position: relative;
+         width: 100%;
+         display: grid;
+         grid-template-columns: 150px 1fr;
+         justify-content: center;
+         align-items: center;
+     }
+     .skills .box h4{
+         text-transform: uppercase;
+         color: #2e4b5a;
+         font-weight: 500;
+     }
+     .skills .box .percent{
+         position: relative;
+         width: 100%;
+         height: 10px;
+         background: rgb(194 192 217);
+     }
+     .skills .box .percent div{
+         position: absolute;
+         top: 0;
+         left: 0;
+         height: 100%;
+         background: #15929f;
+     }
+     .interest ul{
+         display: grid;
+         grid-template-columns: repeat(4,1fr);
+     }
+     .interest ul li{
+         list-style: none;
+         color: #4c758b;
+         font-weight: 500;
+         margin: 10px 0;
+     }
+     .interest ul li .fa{
+         color: #003147;
+         font-size: 18px;
+         width: 20px;
+     }
+     @media(max-width: 1000px){
+         .container{
+             margin: 10px;
+             grid-template-columns: repeat(1,1fr);
+         }
+         .interest ul{
+             grid-template-columns: repeat(2,1fr);
+         }
+     }
+     @media(max-width: 600px)
+     {
+         .about .box{
+             flex-direction: column;
+
+         }
+         .about .box .year_company{
+             margin-bottom: 5px;
+         }
+         .interest ul{
+             grid-template-columns: repeat(1,1fr);
+         }
+     }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left_side">
+            <div class="profiletext">
+                <div class="img">
+                    <img src="me4.jpeg" alt="">
+                </div>
+                <h2>Roshi Kumar <br><span>Web Developer</span><br><span>Programmer</span></h2>
+            </div>
+            <div class="contactinfo">
+                <h3 class="title">Contact Info</h3>
+                <ul>
+                    <li>
+                        <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                        <span class="text">+91 6307394500</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                        <span class="text">roshi.19b131163@abes.ac.in</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-instagram" aria-hidden="true"></i></span>
+                        <span class="text">roshi_kumar27</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                        <span class="text">Varanasi,India</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-globe" aria-hidden="true"></i></span>
+                        <span class="text">www.mywebsite.com</span>
+                    </li>
+                </ul>
+            </div>
+             
+            <div class="contactinfoeducation">
+                <h3 class="title">Education</h3>
+                <ul>
+                    <li>
+                      <h5>2019-2023</h5>
+                      <h4>Bachelors Degree In Information Technology</h4>
+                      <h4>ABES Engineering College</h4>
+                    </li>
+                    <li>
+                      <h5>2018-2019</h5>
+                      <h4>12th Pass with 89%(PCM)</h4>
+                      <h4>Sunbeam School Lahartara</h4>
+                    </li>
+                    <li>
+                      <h5>2016-2017</h5>
+                      <h4>10th pass with 84%</h4>
+                      <h4>Sunbeam School Lahartara</h4>
+                    </li>
+                    <h3 class="title">Special Acheivement</h3>
+                    <li>
+                      <h4>Certified by google as developer</h4>
+                    </li>
+                    <li>
+                        <h4>Digital Marketing certified by Google</h4>
+                    <li>
+                        <h4>IBM Certified as Python Programmer</h4>
+                     </li>   
+                      <li>
+                        <h4>5 star Acheiver as Python Programmer at HakerRank</h4>
+                      </li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right_side">
+            <div class="about">
+                <h2 class="title2">Profile</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus dicta aut maiores asperiores voluptatem earum vel. Iste non deleniti eaque ullam sit ipsum ad, delectus et corrupti atque error placeat aliquam in odio repellat magnam quod! Quos aliquam cumque asperiores illum sint, quas tempore id magni totam eveniet laudantium nisi, tempora, non commodi iusto. <br><br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ex magnam autem at explicabo libero cumque aliquid iure quo voluptates quibusdam tenetur sit, quidem adipisci! Atque, ipsam quidem molestiae nisi accusantium quibusdam voluptatum id sint quisquam exercitationem incidunt iure accusamus, possimus aut adipisci ipsa. Perferendis magni sed nisi, impedit laudantium quo aliquam perspiciatis aspernatur.</p>
+            </div>
+            <div class="about">
+                <h2 class="title2">Experience</h2>
+                <div class="box">
+                    <div class="year_company">
+                        <h5>2019-Present</h5>
+                        <h5>Company name</h5>
+                    </div>
+                    <div class="text">
+                        <h4>Senior ux designer</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore deleniti eos veritatis quasi. Debitis necessitatibus perferendis ab, vero nobis odit ratione sequi! Iure, perspiciatis!</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="year_company">
+                        <h5>2019-Present</h5>
+                        <h5>Company name</h5>
+                    </div>
+                    <div class="text">
+                        <h4>Senior ux designer</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore deleniti eos veritatis quasi. Debitis necessitatibus perferendis ab, vero nobis odit ratione sequi! Iure, perspiciatis!</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="year_company">
+                        <h5>2019-Present</h5>
+                        <h5>Company name</h5>
+                    </div>
+                    <div class="text">
+                        <h4>Senior ux designer</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore deleniti eos veritatis quasi. Debitis necessitatibus perferendis ab, vero nobis odit ratione sequi! Iure, perspiciatis!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about skills">
+                <h2 class="title2">Profesional Skills</h2>
+                <div class="box">
+                    <h4>HTML</h4>
+                    <div class="percent">
+                        <div style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>CSS</h4>
+                    <div class="percent">
+                        <div style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>JAVA SCRIPT</h4>
+                    <div class="percent">
+                        <div style="width: 65%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>PYTHON</h4>
+                    <div class="percent">
+                        <div style="width: 88%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>C programming</h4>
+                    <div class="percent">
+                        <div style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>SQL</h4>
+                    <div class="percent">
+                        <div style="width: 60%;"></div>
+                    </div>
+                </div>
+             </div>
+             <div class="about interest">
+                 <h2 class="title2">Interest</h2>
+                 <ul>
+                     <li><i class="fa fa-life-ring" aria-hidden="true"></i>footbal</li>
+                     <li><i class="fa fa-trophy" aria-hidden="true"></i>Badminton</li>
+                     <li><i class="fa fa-adjust" aria-hidden="true"></i>Volleyball</li>
+                     <li><i class="fa fa-blind" aria-hidden="true"></i>Dancing</li>
+                     <li><i class="fa fa-gamepad" aria-hidden="true"></i>Gaming</li>
+                     <li><i class="fa fa-music" aria-hidden="true"></i>Instrument Playing</li>
+                     <li><i class="fa fa-location-arrow" aria-hidden="true"></i>Travelling</li>
+                 </ul>
+             </div>
+        </div>
+    </div>
+</body>
+</html>
